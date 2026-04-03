@@ -52,7 +52,7 @@ It is built for engineering teams, design teams, AI operators, and knowledge arc
 - Unified multi-agent architecture with skill modules and backend-specific agent configs
 - Methodology-first execution lifecycle:
   - spec -> plan -> execute -> review -> iterate
-- Cross-tool interoperability (Claude, Codex, Cursor, OpenCode-style integrations)
+- Cross-tool interoperability (Buddy AI integrations)
 - UI/UX and design-system toolkit:
   - brand extraction
   - token synchronization
@@ -96,10 +96,10 @@ Suggested top-level structure:
 - `.agents/`
   - `skills/<skill-name>/SKILL.md`
   - `agents/<provider>.yaml`
-- `.claude/skills/`
+- `.buddy-ai/skills/`
   - domain-specific skill packs (brand, design-system, research, etc.)
 - `.plugins/`
-  - claude/cursor/opencode/codex plugin manifests and adapters
+  - buddy-ai plugin manifests and adapters
 - `scripts/`
   - automation scripts (token sync, validation, ingestion, transforms)
 - `data/`
@@ -187,11 +187,11 @@ Inspect a skill:
 
 Run a skill with specific backend:
 
-- super-pro skills run design-system --agent openai --input ./briefs/deck-brief.md
+- super-pro skills run design-system --agent buddy-ai --input ./briefs/deck-brief.md
 
 Switch backend dynamically:
 
-- super-pro agents use claude
+- super-pro agents use buddy-ai
 - super-pro skills run research-synthesis --input ./research/raw-notes.md
 
 ### 3) Design-system and brand token synchronization
